@@ -31,7 +31,7 @@ function ClientNavbar() {
   className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50
     transition-[width,background-color,backdrop-filter,box-shadow,padding] duration-500
     ${scrolled
-      ? "max-w-5xl w-[95%] bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl shadow-white/5 shadow-lg rounded-full py-1"
+      ? "max-w-5xl w-[95%] bg-white/60 dark:bg-zinc-900/60 backdrop-blur-sm shadow-white/5 shadow-lg rounded-full py-1"
       : "w-full bg-background shadow-sm rounded-none top-0 py-3"
     }`}
 >

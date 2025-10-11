@@ -2,6 +2,8 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import InfiniteSlider from "./InfiniteSlider"; 
 
 function HomePage() {
   const videoRef = useRef<HTMLDivElement>(null);
@@ -77,27 +79,46 @@ function HomePage() {
           </motion.div>
         </motion.div>
       )}
+      <div>
+        <InfiniteSlider />
+      </div>
 
       {/* Video Section */}
-      <motion.div
-        ref={videoRef}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 mx-auto mb-20 w-full overflow-hidden rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+      <div className="flex flex-col overflow-hidden">
+      <ContainerScroll
+        titleComponent={
+          <>
+            <h1 className="text-4xl font-semibold text-black dark:text-white">
+              Unleash the power of <br />
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                Quantum 
+              </span>
+            </h1>
+          </>
+        }
       >
-        <div className="relative h-[70vh] w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-          <video
+        <video
+          src="./video_one.mp4"
+          
+          autoPlay
+            loop
+            muted
+            playsInline
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          draggable={false}
+        />
+        {/* <video
             src="./video_one.mp4"
             autoPlay
             loop
             muted
             playsInline
             className="absolute left-0 top-0 h-full w-full object-cover"
-          />
-        </div>
-      </motion.div>
+          /> */}
+      </ContainerScroll>
+    </div>
     </div>
   );
 }
