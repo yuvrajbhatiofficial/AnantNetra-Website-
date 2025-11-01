@@ -1,41 +1,63 @@
 "use client";
 
+import React, { MouseEvent as ReactMouseEvent, useEffect, useState } from "react";
 import { useMotionValue, motion, useMotionTemplate } from "motion/react";
-import React, { MouseEvent as ReactMouseEvent, useState } from "react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { cn } from "@/lib/utils";
 
-export const CardSpotlight = ({
-  children,
-  radius = 350,
-  color = "#262626",
-  className,
-  ...props
-}: {
+interface CardSpotlightProps extends React.HTMLAttributes<HTMLDivElement> {
   radius?: number;
   color?: string;
   children: React.ReactNode;
-} & React.HTMLAttributes<HTMLDivElement>) => {
+}
+
+export const CardSpotlight: React.FC<CardSpotlightProps> = ({
+  children,
+  radius = 350,
+  color,
+  className,
+  ...props
+}) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  function handleMouseMove({
+
+  const [isHovering, setIsHovering] = useState(false);
+  const [themeColor, setThemeColor] = useState<string>(color || "#262626");
+
+  // Automatically update color based on light/dark mode
+  useEffect(() => {
+    const updateThemeColor = (isDark: boolean) => {
+      setThemeColor(isDark ? "#262626" : "#f3f4f6");
+    };
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    updateThemeColor(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => updateThemeColor(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, [color]);
+
+  const handleMouseMove = ({
     currentTarget,
     clientX,
     clientY,
-  }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
-
+  }: ReactMouseEvent<HTMLDivElement>) => {
+    const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-  }
+  };
 
-  const [isHovering, setIsHovering] = useState(false);
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
+
   return (
     <div
       className={cn(
-        "group/spotlight p-10 rounded-md relative border border-neutral-800 bg-black dark:border-neutral-800",
+        "group/spotlight relative rounded-md border border-neutral-800 bg-neutral-50 dark:bg-black dark:border-neutral-800 p-10 overflow-hidden",
         className
       )}
       onMouseMove={handleMouseMove}
@@ -46,8 +68,15 @@ export const CardSpotlight = ({
       <motion.div
         className="pointer-events-none absolute z-0 -inset-px rounded-md opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
         style={{
-          backgroundColor: color,
+          backgroundColor: themeColor,
           maskImage: useMotionTemplate`
+            radial-gradient(
+              ${radius}px circle at ${mouseX}px ${mouseY}px,
+              white,
+              transparent 80%
+            )
+          `,
+          WebkitMaskImage: useMotionTemplate`
             radial-gradient(
               ${radius}px circle at ${mouseX}px ${mouseY}px,
               white,
@@ -61,8 +90,8 @@ export const CardSpotlight = ({
             animationSpeed={5}
             containerClassName="bg-transparent absolute inset-0 pointer-events-none"
             colors={[
-              [59, 130, 246],
-              [139, 92, 246],
+              [59, 130, 246], // blue
+              [139, 92, 246], // purple
             ]}
             dotSize={3}
           />

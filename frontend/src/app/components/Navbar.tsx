@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./Theme-toggle";
 
 
 function ClientNavbar() {
@@ -42,6 +43,7 @@ function ClientNavbar() {
       >
         {/* Logo or Brand */}
         <div className="text-xl font-semibold">AnantNetra</div>
+         <ThemeToggle />
 
         {/* Desktop Menu */}
         <div className="hidden md:block">
@@ -259,7 +261,7 @@ function ClientNavbar() {
                 <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
                 <NavigationMenuContent className="w-auto min-w-[250px] p-6">
                   <NavigationMenuLink asChild>
-                    <a href="#">Contact Form / Details</a>
+                    <a href="#contact">Contact Form / Details</a>
                   </NavigationMenuLink>
                 </NavigationMenuContent>
               </NavigationMenuItem>
