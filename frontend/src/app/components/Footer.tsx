@@ -4,6 +4,7 @@ import React from "react"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Twitter, Youtube, Mail } from "lucide-react"
+import Link from "next/link"
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -14,9 +15,10 @@ function Footer() {
 
         {/* Column 1 — Brand */}
         <div className="col-span-1 sm:col-span-2 space-y-3">
-          <h2 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+          <a href="./"><h2 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
             AnantNetra Technologies
           </h2>
+          </a>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-sm">
             Beyond Technology. Towards Tomorrow.  
             We design intelligent, ethical, and secure digital solutions 
@@ -103,9 +105,9 @@ function Footer() {
       <div className="w-full mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
         <p>© {currentYear} AnantNetra Technologies. All Rights Reserved.</p>
         <div className="flex gap-4">
-          <a href="#">Privacy Policy</a>
+          <a href="/PrivacyPolicy">Privacy Policy</a>
           <span>|</span>
-          <a href="#">Terms of Service</a>
+          <a href="/Terms">Terms of Service</a>
           <span>|</span>
           <a href="#">Sitemap</a>
         </div>
