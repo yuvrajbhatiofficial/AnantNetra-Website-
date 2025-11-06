@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 function Contact() {
   const [result, setResult] = useState<string>("");
@@ -31,7 +31,7 @@ function Contact() {
     setResult("Sending...");
   const form = e.currentTarget; // ✅ store it before await
 const formData = new FormData(form);
-formData.append("access_key","12304545-ffbf-43db-adf1-2579f475c229");
+formData.append("access_key",process.env.NEXT_PUBLIC_FORM_ACCESS_KEY || "");
 
 formData.append("subject", "New Contact Form Submission");
 formData.append(
@@ -75,30 +75,17 @@ if (data.success) {
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             <p className="text-gray-700 dark:text-gray-300">
-              operations@anantnetra.com
+              Services@anantnetra.com
             </p>
           </div>
           <div className="flex items-center gap-3">
             <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            <p className="text-gray-700 dark:text-gray-300">+91 98765 43210</p>
+            <p className="text-gray-700 dark:text-gray-300">+91 72299 84997</p>
           </div>
-          <div className="flex items-center gap-3">
-            <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            <p className="text-gray-700 dark:text-gray-300">
-              Jaipur, Rajasthan, India
-            </p>
-          </div>
+          
         </div>
 
-        <div className="mt-10">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-            Working Hours
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            Mon - Fri: 9:00 AM – 6:00 PM
-          </p>
-          <p className="text-gray-600 dark:text-gray-400">Sat - Sun: Closed</p>
-        </div>
+        
       </div>
 
       {/* Right Section */}

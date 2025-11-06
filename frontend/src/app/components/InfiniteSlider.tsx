@@ -17,16 +17,19 @@ function InfiniteSlider() {
                 <img src="./logo-mfour.svg" alt="any" className='w-36' />
             </Slider.Slide>
             <Slider.Slide>
-                <img src="https://www.svgrepo.com/show/303121/forbes-logo.svg" alt="any2" className='w-36' />
+                <img src="./ATONARP.svg" alt="any2" className='w-36' />
             </Slider.Slide>
             <Slider.Slide>
-                <img src="https://www.svgrepo.com/show/303141/spotify-1-logo.svg" alt="any4" className='w-36' />
+                <img src="./BoundRY.svg" alt="any4" width="200" height="200" className='w-36' />
             </Slider.Slide>
             <Slider.Slide>
-                <img src="https://www.svgrepo.com/show/303143/microsoft-logo.svg" alt="any5" className='w-36' />
+                <img src="./Cover.svg" alt="any5" className='w-36' />
             </Slider.Slide>
             <Slider.Slide>
-                <img src="https://www.svgrepo.com/show/303132/coca-cola-logo.svg" alt="any5" className='w-36' />
+                <img src="./Telexistence.svg" alt="any5" className='w-36' />
+            </Slider.Slide>
+            <Slider.Slide>
+                <img src="./THINKCYTE-LOGO-DK-1000W.svg" alt="any5" className='w-36' />
             </Slider.Slide>
            
            

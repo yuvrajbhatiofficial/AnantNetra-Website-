@@ -15,10 +15,10 @@ function Footer() {
 
         {/* Column 1 — Brand */}
         <div className="col-span-1 sm:col-span-2 space-y-3">
-          <a href="./"><h2 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+          <Link href="./"><h2 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
             AnantNetra Technologies
           </h2>
-          </a>
+          </Link>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-sm">
             Beyond Technology. Towards Tomorrow.  
             We design intelligent, ethical, and secure digital solutions 
@@ -26,12 +26,12 @@ function Footer() {
           </p>
           <div className="flex gap-3 pt-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/anantnetra-technologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/anantnetratech?s=21" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
             </Button>
@@ -105,9 +105,9 @@ function Footer() {
       <div className="w-full mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
         <p>© {currentYear} AnantNetra Technologies. All Rights Reserved.</p>
         <div className="flex gap-4">
-          <a href="/PrivacyPolicy">Privacy Policy</a>
+          <Link href="/PrivacyPolicy">Privacy Policy</Link>
           <span>|</span>
-          <a href="/Terms">Terms of Service</a>
+          <Link href="/Terms">Terms of Service</Link>
           <span>|</span>
           <a href="#">Sitemap</a>
         </div>

@@ -12,6 +12,7 @@ import {
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./Theme-toggle";
+import Link from "next/link";
 
 
 function ClientNavbar() {
@@ -42,7 +43,13 @@ function ClientNavbar() {
         }`}
       >
         {/* Logo or Brand */}
-        <div className="text-xl font-semibold">AnantNetra</div>
+        
+        <div>
+        <img src="/darkLogo.svg" alt="" width="50" height="50" className="dark:hidden "/>
+        <img src="/LightLogo.svg" alt="" width="50" height="50" className=" hidden dark:block "/>
+        </div>
+        {/* <div className="text-xl font-semibold">AnantNetra</div> */}
+        <Link href="/" className="text-xl font-semibold">AnantNetra</Link>
          <ThemeToggle />
 
         {/* Desktop Menu */}
@@ -74,35 +81,35 @@ function ClientNavbar() {
                       <ul className="space-y-2">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Artificial Intelligence</a>
+                            <Link href="/Services">Artificial Intelligence</Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Data Related Services</a>
+                            <a href="/Services">Data Related Services</a>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Development</a>
+                            <a href="/Services">Development</a>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">APIs & Dashboards</a>
+                            <a href="/Services">APIs & Dashboards</a>
                           </NavigationMenuLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-span-2 space-y-2">
                       <NavigationMenuLink asChild>
-                        <a href="#">Cyber Audit</a>
+                        <a href="/Services">Cyber Audit</a>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <a href="#">Incident Response</a>
+                        <a href="/Services">Incident Response</a>
                       </NavigationMenuLink>
                       <NavigationMenuLink asChild>
-                        <a href="#">Customer Success</a>
+                        <a href="/Services">Customer Success</a>
                       </NavigationMenuLink>
                     </div>
                   </div>
@@ -116,17 +123,17 @@ function ClientNavbar() {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Free Consultancy & Audit Call</a>
+                        <a href="/Services">Free Consultancy & Audit Call</a>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Cyber Audit</a>
+                        <a href="/Services">Cyber Audit</a>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">IT Audit / Product / Service</a>
+                        <a href="/Services">IT Audit / Product / Service</a>
                       </NavigationMenuLink>
                     </li>
                   </ul>
@@ -140,12 +147,12 @@ function ClientNavbar() {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">AnantNetra</a>
+                        <Link href="./">AnantNetra</Link>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">NetraSecure AI</a>
+                        <a href="/Services">NetraSecure AI</a>
                       </NavigationMenuLink>
                     </li>
                   </ul>
@@ -166,17 +173,17 @@ function ClientNavbar() {
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Meet the Team</a>
+                            <a href="/Services">Meet the Team</a>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Careers</a>
+                            <a href="/Services">Careers</a>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a href="#">Events</a>
+                            <a href="/Services">Events</a>
                           </NavigationMenuLink>
                         </li>
                       </ul>
@@ -188,19 +195,19 @@ function ClientNavbar() {
                     <NavigationMenuContent className="w-auto min-w-[250px] p-6">
                       <div className="grid grid-cols-2 gap-6 text-sm">
                         <NavigationMenuLink asChild>
-                          <a href="#">Blog</a>
+                          <a href="/Services">Blog</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                          <a href="#">Knowledge Base</a>
+                          <a href="/Services">Knowledge Base</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                          <a href="#">Press Releases</a>
+                          <a href="/Services">Press Releases</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                          <a href="#">Data Sheets</a>
+                          <a href="/Services">Data Sheets</a>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                          <a href="#">White Papers</a>
+                          <a href="/Services">White Papers</a>
                         </NavigationMenuLink>
                       </div>
                     </NavigationMenuContent>
@@ -215,7 +222,7 @@ function ClientNavbar() {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Book a Free Audit</a>
+                        <a href="/Services">Book a Free Audit</a>
                       </NavigationMenuLink>
                     </li>
                     <li className="pt-2 text-xs text-muted-foreground">
@@ -227,7 +234,7 @@ function ClientNavbar() {
                       Have questions? Schedule a call today.
                       <br />
                       <NavigationMenuLink asChild>
-                        <a href="#">Report an Incident</a>
+                        <a href="/Services">Report an Incident</a>
                       </NavigationMenuLink>
                     </li>
                   </ul>
@@ -240,17 +247,17 @@ function ClientNavbar() {
                   <ul className="space-y-2 text-sm">
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Apply for Full-Time & Internship</a>
+                        <a href="/Services">Apply for Full-Time & Internship</a>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Apply for Accelerator</a>
+                        <a href="/Services">Apply for Accelerator</a>
                       </NavigationMenuLink>
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <a href="#">Apply as an Investor</a>
+                        <a href="/Services">Apply as an Investor</a>
                       </NavigationMenuLink>
                     </li>
                   </ul>
@@ -286,42 +293,42 @@ function ClientNavbar() {
         <div className="md:hidden bg-background border-t shadow-sm">
           <ul className="flex flex-col p-4 space-y-3 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Solutions
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Platform
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Company
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Resources
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Threat Advisory
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/Services" className="hover:underline">
                 Partners
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="#contact" className="hover:underline">
                 Contact
               </a>
             </li>
