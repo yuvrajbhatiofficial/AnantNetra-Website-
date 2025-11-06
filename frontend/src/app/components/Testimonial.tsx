@@ -6,39 +6,19 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Samay Raina",
-      designation: "Product Manager at TechFlow",
-      src: "https://upload.wikimedia.org/wikipedia/commons/4/46/Samay_raina_%28cropped%29.jpg",
+        "Anantnetra Technologies has proper expertise in AI automation with strong industry experience and an excellent foundation in the tech stack. We are proud to partner with Anantnetra Technologies and look forward to continued collaboration.",
+      name: "Dr. Yili Qin",
+      designation: "Ph.D. in AI & Robotics",
+      src: "./Test_one.jpeg",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Sydney Mommy",
-      designation: "CTO at InnovateSphere",
-      src: "https://image-cdn.netflixjunkie.com/wp-content/uploads/imago0256627473h-1-e1684781898824.jpg",
+        "We found Anantnetra Technologies’ cyber audit experience to be outstanding. Their cybersecurity team demonstrated great knowledge and expertise, delivering a detailed and high-quality audit report in minimal time. We truly appreciate their professionalism and efficiency.",
+      name: "Alex S.",
+      designation: "Project Manager, Cover",
+      src: "./Test_two.jpeg",
     },
-    {
-      quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Apple Uncle",
-      designation: "Operations Director at CloudScale",
-      src: "https://cdn.mos.cms.futurecdn.net/yygi3vC7NsuwpFJamMxB9W.jpg",
-    },
-    {
-      quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "Mark Choudhry",
-      designation: "Engineering Lead at DataPro",
-      src: "https://i.insider.com/5d84f6dd21214c4ad512d856?width=700",
-    },
-    {
-      quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Sundar Bhai",
-      designation: "VP of Technology at FutureNet",
-      src: "https://imageio.forbes.com/specials-images/imageserve/67e5cbc9823431a56b4ad600/0x0.jpg?format=jpg&crop=1072,1072,x1828,y0,safe&height=416&width=416&fit=bounds",
-    },
+    
   ];
   return (
     <div>

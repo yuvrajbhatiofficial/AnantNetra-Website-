@@ -9,12 +9,12 @@ function InfiniteSlider() {
      <Slider
             width="250px"
             duration={10}
-            pauseOnHover={true}
+            pauseOnHover={false}
             blurBorders={false}
             blurBorderColor={'#fff'}
         >
             <Slider.Slide>
-                <img src="https://www.svgrepo.com/show/303152/tinder-1-logo.svg" alt="any" className='w-36' />
+                <img src="./logo-mfour.svg" alt="any" className='w-36' />
             </Slider.Slide>
             <Slider.Slide>
                 <img src="https://www.svgrepo.com/show/303121/forbes-logo.svg" alt="any2" className='w-36' />
