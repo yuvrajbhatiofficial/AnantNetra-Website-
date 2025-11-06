@@ -46,7 +46,7 @@ function ClientNavbar() {
         
         <div>
         <img src="/darkLogo.svg" alt="" width="50" height="50" className="dark:hidden "/>
-        <img src="/LightLogo.svg" alt="" width="50" height="50" className=" hidden dark:block "/>
+        <img src="/lightLogo.svg" alt="" width="50" height="50" className=" hidden dark:block "/>
         </div>
         {/* <div className="text-xl font-semibold">AnantNetra</div> */}
         <Link href="/" className="text-xl font-semibold">AnantNetra</Link>
