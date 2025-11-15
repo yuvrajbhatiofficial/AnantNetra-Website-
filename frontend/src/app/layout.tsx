@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import ClientNavbar from "./components/Navbar";
+import Script from "next/script";
 
 
 
@@ -31,6 +32,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+    <head>
+
+    </head>
+     <Script
+    strategy="afterInteractive"
+    src="https://www.googletagmanager.com/gtag/js?id=G-LTLXFVJJB9"
+  />
+
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LTLXFVJJB9');
+    `}
+  </Script>
       <body 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

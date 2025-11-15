@@ -113,7 +113,7 @@ function HomePage() {
           }
         >
           <video
-            src="./video_one.mp4"
+            src="./video_two.mp4"
             autoPlay
             loop
             muted
